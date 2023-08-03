@@ -1,39 +1,700 @@
-.App {
+@font-face {
+  font-family: "roboto";
+  src: url("/public/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("/public/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "roboto-thin";
+  src: url("/public/fonts/Roboto-Thin.ttf");
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  --white: #fff;
+  --black: #272932;
+  --black-2: #3f4141;
+  --primary: #d3c22c;
+  --secondary: #E7ECEF;
+  --blue: #0F7173;
+  --red: #F05D5E;
+  height: 100%;
+}
+
+body {
+  font-family: "roboto";
+  height: 100%;
+}
+
+.hotel.welcome {
+  background-image: linear-gradient(to bottom,#0006 , #0006), url("/public/images/banniere.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+/*  NARBAR */
+nav.navbar {
+  height: 80px;
+}
+
+.hotel.booking nav.navbar {
+  background-color: var(--white);
+}
+
+.hotel.booking nav.navbar li {
+  color: var(--black);
+}
+
+.hotel.booking nav.navbar li.devise {
+  height: 20px;
+}
+
+.hotel.booking .navbar li select {
+  border: none;
+}
+
+nav.navbar ul {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.navbar li {
+  list-style: none;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+nav.navbar li:nth-child(2),
+nav.navbar li:nth-child(3),
+nav.navbar li:nth-child(4),
+nav.navbar li:nth-child(5),
+nav.navbar li:nth-child(6),
+nav.navbar li:nth-child(7),
+nav.navbar li:nth-child(8) {
+  padding-top: 30px;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+nav.navbar li:nth-child(2),
+nav.navbar li:nth-child(3),
+nav.navbar li:nth-child(4),
+nav.navbar li:nth-child(5),
+nav.navbar li:nth-child(6),
+nav.navbar li:nth-child(7),
+nav.navbar li:nth-child(8) {
+  transition: color .3s ease;
+}
+
+nav.navbar li:nth-child(2):hover,
+nav.navbar li:nth-child(3):hover,
+nav.navbar li:nth-child(4):hover,
+nav.navbar li:nth-child(5):hover,
+nav.navbar li:nth-child(6):hover,
+nav.navbar li:nth-child(7):hover,
+nav.navbar li:nth-child(8):hover {
+  color: var(--primary);
+}
+
+.welcome-content {
+  text-align: center;
+  color: var(--white);
+  height: auto;
+  margin-top: 100px;
+}
+
+.welcome-content h1, .welcome-content p, .welcome-content .btn {
+  height: auto;
+  margin-top: 60px;
+}
+
+.welcome-content h1 {
+  font-family: "roboto-thin";
+  letter-spacing: 8px;
+  font-size: 55px;
+}
+
+.welcome-content p {
+  font-family: "roboto-thin";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+h2, h4, p, li {
+  height: auto;
+}
+/* FIN NARBAR */
+
+.btn {
+  border-radius: 2px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn.cta-btn {
+  padding: 20px;
+  background-color: var(--primary);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: filter .3s ease;
+}
+
+.btn.cta-btn svg {
+  transform: translateY(4px);
+  transition: transform .3s ease-in;
+}
+
+.btn.cta-btn:hover {
+  filter: brightness(0.91);
+}
+
+.btn.cta-btn:hover svg {
+  transform: translateX(10px) translateY(4px);
+}
+
+.btn.btn-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+  transition: filter .3s ease;
+}
+
+.btn.btn-secondary:hover {
+  filter: contrast(.9);
+}
+
+/* RESERVATION */
+.booking-content .booking-header {
+  height: 50px;
+  display: flex;
+  justify-content: start;
+}
+
+.booking-content .adress {
+  background-color: var(--blue);
+  width: 60%;
+  color: var(--white);
+  padding: 50px 30px;
+  text-shadow: 0 0 5px var(--black);
+  letter-spacing: 2px;
+}
+
+.booking-content .advantages {
+  position: relative;
+  background-color: var(--black);
+  width: 40%;
+  height: 110px;
+  padding: 20px 30px;
+  color: var(--white);
+  text-align: right;
+}
+
+.booking-content .advantages::before {
+  content: '';
+  border-top: 75px solid var(--black);
+  border-left: 35px solid transparent;
+  border-right: 35px solid var(--black);
+  border-bottom: 75px solid transparent;
+  position: absolute;
+  top: 0;
+  left: -70px;
+}
+
+.booking-content .advantages li {
+  list-style: none;
+}
+
+.booking-content .advantages svg {
+  color: var(--primary);
+  transform: translateY(20%);
+  margin-left: 10px;
+}
+
+.booking-content .advantages h4 {
+  font-family: "roboto-thin";
+  font-weight: normal;
+}
+
+.booking-content main {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  margin-top: 100px;
+  height: auto;
+  background-image: url("/public/images/bg.jpg");
+}
+
+.booking-content main .left {
+  width: 60%;
+  z-index: 10;
+  box-shadow: 2px 2px 8px var(--black-2);
+  background-color: var(--white);
+}
+
+.booking-content main .right {
+  background-color: var(--white);
+  box-shadow: 0 2px 8px var(--black-2);
+  width: 40%;
+}
+
+.booking-content main .right .content {
+  padding: 10px;
+}
+
+.right-header {
+  padding: 5px 10px;
+  background-color: var(--black-2);
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.booking-content .right .starting, 
+.booking-content .right .coming,
+.booking-content .right .night, 
+.booking-content .night .night-number,
+.booking-content .bedrooms, 
+.booking-content .coupon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-content .right .starting,
+.booking-content .right .night {
+  margin-top: 20px;
+}
+
+.booking-content .starting input, .booking-content .coming input {
+  width: 80px;
+}
+
+.booking-content .night-number svg, .booking-content .night-number p {
+  stroke: var(--white);
+  margin-left: 5px;
+}
+
+.booking-content .night-number svg:nth-child(1){
+  fill: var(--black-2);
+  cursor: pointer;
+  transition: transform .3s ease-in
+}
+
+.booking-content .night-number svg:nth-child(3){
+  fill: var(--black);
+  cursor: pointer;
+  transition: transform .3s ease-in
+}
+
+.booking-content .night-number svg:hover {
+  transform: scale(1.1);
+}
+
+.booking-content .night-number p {
+  margin-top: 5px;
+}
+
+.booking-content .right .icons svg {
+  width: 20px;
+}
+
+.booking-content .right .icons svg:nth-child(2){
+  margin-left: 5px;
+}
+
+.booking-content .bedrooms, 
+.booking-content .coupon {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--black);
+}
+
+.booking-content .bedrooms {
+  margin-top: 20px;
+}
+
+.booking-content .bedrooms {
+  border-top: 1px solid var(--black);
+}
+
+.booking-content .bedrooms select, .booking-content .coupon input {
+  padding: 4px;
+}
+
+.booking-content .bedrooms select {
+  width: 222px;
+}
+
+.booking-content .coupon input {
+  
+  width: 210px;
+}
+
+.booking-content .coupon input::placeholder {
+  font-size: 13px;
+}
+
+.booking-content .right-footer {
+  float: right;
+  text-align: right;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  line-height: 1.5;
+}
+
+table td {
+  width: 90px;
+  height: 50px;
+  text-align: right;
+}
+
+table td.active-date {
+  background-color: var(--primary);
+}
+
+.hotel.booking td {
+  cursor: pointer;
+}
+
+.calendar-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-header select {
+  border: none;
+}
+
+.calendar-header svg {
+  cursor: pointer;
+  transition: transform .3s ease;
+}
+
+.calendar-header svg:hover {
+  transform: scale(1.2);
+}
+
+.calendar .notes {
+  padding: 10px;
+}
+
+.calendar .notes div {
+  margin-top: 10px;
+}
+.calendar .notes p {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.calendar .notes svg {
+  stroke: var(--red);
+  transform: translateY(5px);
+}
+
+.calendar .notes .available-nights {
+  position: relative;
+}
+
+.calendar .notes .restrictions svg,
+.calendar .notes .available-nights svg {
+  fill: var(--black);
+  stroke: var(--white);
+}
+
+.calendar .available-nights .number-of-nights {
+  position: absolute;
+  color: var(--black);
+  top: 0;
+  font-size: 12px;
+  margin-left: 0;
+  left: 14px;
+}
+
+.booking-content .left .offers {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.booking-content .left .offers h2 {
+  font-weight: lighter;
+  border-bottom: 1px solid var(--black-2);
+  padding-bottom: 10px;
+}
+
+.booking-content .left .offers img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.booking-content .offers p {
+  font-weight: 600;
+}
+
+.booking-content .offers .know-more {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: filter .3s ease;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.booking-content .offers .know-more:hover {
+  filter: saturate(1.4);
+}
+/* FIN RESERVATION */
+
+/* HOTEL PRESENTATION */
+
+.hotel.hotel-presentation nav .caption, 
+.hotel.place nav .caption,
+.hotel.events nav .caption,
+.hotel.contact-page nav .caption {
+  color: var(--black);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.hotel.hotel-presentation nav .back, 
+.hotel.place nav .back,
+.hotel.events nav .back,
+.hotel.contact-page nav .back {
+  color: var(--black);
+}
+
+.hotel.hotel-presentation nav, 
+.hotel.place nav,
+.hotel.events nav,
+.hotel.contact-page nav {
+  border-bottom: 1px solid #ccc;
+}
+
+.hotel.hotel-presentation nav .caption:hover, 
+.hotel.place nav .caption:hover,
+.hotel.events nav .caption:hover,
+.hotel.contact nav .caption:hover {
+  color: var(--black);
+}
+
+.hotel.hotel-presentation h1, 
+.hotel.place h1,
+.hotel.events h1,
+.hotel.contact-page h1 {
+  margin: 50px auto;
+  height: auto;
+  width: 100px;
+  color: var(--black-2);
+}
+
+.hotel.place h1, .hotel.events h1, .hotel.contact-page h1 {
+  width: 200px;
+}
+
+.hotel.hotel-presentation main, 
+.hotel.place main,
+.hotel.events main,
+.hotel.contact-page main {
+  width: 572px;
+  height: auto;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.hotel.contact-page main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel.contact-page .right .btn.cta-btn {
+  margin-bottom: 30px;
+}
+
+.hotel.hotel-presentation main img,
+.hotel.events main img {
+  width: 100%;
+  height: 272px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  letter-spacing: 2.5px;
+}
+
+.hotel.hotel-presentation main span,
+.hotel.contact-page main span {
+  color: var(--blue);
+}
+
+.hotel.hotel-presentation .bedrooms-equipments, 
+.hotel.place .free-services,
+.hotel.place .services,
+.hotel.events .more-services,
+.hotel.contact-page .all-contact,
+.hotel.contact-page .accessibility {
+  margin-top: 20px;
+  height: auto;
+}
+
+.hotel.hotel-presentation .bedrooms-equipments div, 
+.hotel.place .free-services div,
+.hotel.place .services div,
+.hotel.events .more-services div {
+  height: auto;
+  margin-top: 15px;
+}
+
+.hotel.hotel-presentation .bedrooms-equipments .title, 
+.hotel.place .free-services .title,
+.hotel.place .services .title,
+.hotel.events .more-services .title,
+.hotel.events .meeting-rooms-capacity .title,
+.hotel.contact-page .title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hotel.contact-page .title {
+  display: inline-block;
+}
+
+.hotel.contact-page .rtc div {
+  display: inline-block;
+}
+
+.hotel.contact-page .rtc div:nth-child(2) {
+  margin-left: 20px;
+}
+
+.hotel.contact-page .rtc svg {
+  fill: var(--black);
+}
+
+.hotel.contact-page .all-contact .title {
+  margin-left: 10px;
+}
+
+.hotel.contact-page .phone p, .hotel.contact-page .fax p {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.hotel.contact-page .fax {
+  margin-bottom: 15px;
+}
+
+.hotel.contact-page .email {
+  margin-bottom: 20px;
+}
+
+.hotel.contact-page .adress {
+  margin-bottom: 15px;
+}
+
+.hotel.contact-page .adress svg {
+  transform: translateY(3px);
+}
+
+.hotel.contact-page .adress p {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hotel.contact-page .adress .details p {
+  margin-bottom: 10px;
+  margin-left: 0;
+  display: block;
+  font-weight: lighter;
+}
+
+.hotel.hotel-presentation main svg, 
+.hotel.place main svg,
+.hotel.events main svg,
+.hotel.contact-page main svg {
+  width: 20px;
+}
+
+.hotel.hotel-presentation .paragraph, 
+.hotel.place .paragraph,
+.hotel.events .paragraph {
+  margin-top: 15px;
+}
+
+.hotel.hotel-presentation .bedrooms-equipments div p, 
+.hotel.place .free-services div p,
+.hotel.place .services div p,
+.hotel.events .more-services div p {
+  margin-left: 10px;
+  display: inline-block;
+  width: 90%;
+}
+
+.hotel.place .free-services .parking svg:nth-child(2){
+  margin-left: 5px;
+}
+
+.hotel.events .img-caption {
+  margin-top: -10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hotel.events table {
+  text-align: center;
+  border-collapse: collapse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.hotel.events table td, .hotel.events table th {
+  text-align: center;
+  border: 1px solid var(--black);
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.hotel.events .meeting-rooms-capacity {
+  margin-top: 25px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.hotel.events table thead, .hotel.events table tr {
+  height: 50px;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.hotel.events footer, .hotel.hotel-presentation footer {
+  height: 30px;
 }
+
+.hotel.contact-page .newsletter p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--black-2);
+}
+
+.hotel.contact-page .newsletter label {
+  margin-bottom: 7px;
+}
+
+.hotel.contact-page .newsletter input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.hotel.contact-page .btn.btn-secondary {
+  float: right;
+}
+
+/* FIN HOTEL PRESENTATION */
