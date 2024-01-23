@@ -162,7 +162,6 @@ export default function Booking(){
 
     const handleClickCell = (e) => {
         const clickedCell = e.currentTarget;
-        console.log("click cell")
         const cells = document.querySelectorAll('td')
         if(cells.length > 0){
             cells.forEach(cell => {
@@ -380,14 +379,14 @@ export default function Booking(){
                 <div className="offers">
                     <h2>Nos offres</h2>
                     <div className="appartment">
-                        <img src="/images/hotel.jpg"/>
+                        <img src="./hotel-website-frontent/images/hotel.jpg" alt="hotel"/>
                         <p>Appartement</p>
-                        <a className="know-more">En savoir plus</a>
+                        <a className="know-more" href="https://#">En savoir plus</a>
                     </div>
                     <div className="rooms">
-                        <img src="/images/hotel.jpg"/>
+                        <img src="./hotel-website-frontent/images/hotel.jpg" alt="hotel"/>
                         <p>Chambre</p>
-                        <a className="know-more">En savoir plus</a>
+                        <a className="know-more" href="https://#">En savoir plus</a>
                     </div>
                 </div>
             </div>

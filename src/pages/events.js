@@ -11,8 +11,8 @@ export default function Events(){
     return <div className="events">
         <h1>Salles de réunion</h1>
         <main>
-            <img src="/images/room-one.jpeg" alt=""/>
-            <img src="/images/room-two.jpg" alt=""/>
+            <img src="./hotel-website-frontent/images/room-one.jpeg" alt=""/>
+            <img src="./hotel-website-frontent/images/room-two.jpg" alt=""/>
             <p className="img-caption">A partir de 85£</p>
             <p className="paragraph">
                 Aut, perferendis natus explicabo sit magnam aliquam. 

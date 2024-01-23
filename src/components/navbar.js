@@ -7,7 +7,7 @@ export default function Navbar({menuList}){
     return <nav className="navbar">
         <ul>
             <li className="logo">
-                <img src="/images/LOGO.jpg"/>
+                <img src="./hotel-website-frontent/images/LOGO.jpg"/>
             </li>
             {menuList.map(menu => {
                 if("type" in menu && menu.type === "dropdown"){

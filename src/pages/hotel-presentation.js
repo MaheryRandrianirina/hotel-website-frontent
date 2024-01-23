@@ -10,7 +10,7 @@ export default function HotelPresentation(){
     return <div className="hotel-presentation">
         <h1>L' hôtel</h1>
         <main>
-            <img src="/images/hotel.jpg" alt=""/>
+            <img src="./hotel-website-frontent/images/hotel.jpg" alt=""/>
             <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             <p className="paragraph">
                 Aut, perferendis natus explicabo sit magnam <span>aliquam</span>. 
