@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hotel-website-frontent/static/css/main.190d5dca.css",
-    "main.js": "/hotel-website-frontent/static/js/main.d855489a.js",
+    "main.css": "/hotel-website-frontent/static/css/main.cd963095.css",
+    "main.js": "/hotel-website-frontent/static/js/main.f52523aa.js",
     "static/js/787.d6633bd5.chunk.js": "/hotel-website-frontent/static/js/787.d6633bd5.chunk.js",
     "static/media/bg.jpg": "/hotel-website-frontent/static/media/bg.9118f88e64d75a49c529.jpg",
     "static/media/Roboto-Thin.ttf": "/hotel-website-frontent/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
@@ -9,12 +9,12 @@
     "static/media/Roboto-Bold.ttf": "/hotel-website-frontent/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
     "static/media/banniere.jpg": "/hotel-website-frontent/static/media/banniere.1994cc004ff4d03e1d05.jpg",
     "index.html": "/hotel-website-frontent/index.html",
-    "main.190d5dca.css.map": "/hotel-website-frontent/static/css/main.190d5dca.css.map",
-    "main.d855489a.js.map": "/hotel-website-frontent/static/js/main.d855489a.js.map",
+    "main.cd963095.css.map": "/hotel-website-frontent/static/css/main.cd963095.css.map",
+    "main.f52523aa.js.map": "/hotel-website-frontent/static/js/main.f52523aa.js.map",
     "787.d6633bd5.chunk.js.map": "/hotel-website-frontent/static/js/787.d6633bd5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.190d5dca.css",
-    "static/js/main.d855489a.js"
+    "static/css/main.cd963095.css",
+    "static/js/main.f52523aa.js"
   ]
 }
